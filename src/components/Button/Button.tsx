@@ -1,7 +1,7 @@
 import React, { ReactElement } from 'react'
-import './Button.css'
+import styles from './Button.module.css'
 
-export interface ButtonProps {
+interface ButtonProps {
   variant: string
   children: string
   onClick?: () => void
@@ -9,7 +9,7 @@ export interface ButtonProps {
 
 const Button = ({ variant, children, onClick }: ButtonProps) => {
   return (
-    <button className={variant} onClick={onClick}>
+    <button className={styles[variant]} onClick={onClick}>
       {children}
     </button>
   )
